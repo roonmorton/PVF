@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Iniciar Sesión";
+}
+
+
+<div class="row" style="width:60%; margin:2em auto; background:#fff">
+        <div class="well well-sm text-primary text-center">
+            <h3>La casa del Rincon Guatemalteco</h3>
+        @ViewBag.MensajeInicio
+
+    </div>
+
+    <form action="/login/iniciar" method="post">
+        <div class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+
+                    <label class="control-label col-md-2" for="IdCategoria">Usuario</label>
+                    <div class="col-md-6">
+                        <input class="form-control text-box single-line" id="usuario" name="usuario" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="IdCategoria">Contraseña</label>
+                    <div class="col-md-6">
+                        <input class="form-control text-box single-line" id="pass" name="pass" type="password" value="">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-actions col-md-offset-2">
+                <input class="btn btn-primary fa-th-large" type="submit" name="btnguardar" value="Iniciar" />
+            </div>
+        </div>
+    </form>
+    <div class="text-primary text-danger text-center">
+        @ViewBag.MensajeError
+    </div>
+</div>
